@@ -1,0 +1,27 @@
+public class Main {
+
+    public static String decrypt(String cipherText) {
+        StringBuilder plainText = new StringBuilder();
+
+        for (char c : cipherText.toCharArray()) {
+         
+            char decryptedChar = (char) (c + 3);
+
+      
+            if (decryptedChar > 'z') {
+                decryptedChar -= 26;
+            }
+
+            plainText.append(decryptedChar);
+        }
+
+        return plainText.toString();
+    }
+
+    public static void main(String[] args) {
+        String cipherText = "abcde";
+        String plainText = decrypt(cipherText);
+
+        System.out.println("Decrypted text: " + plainText);
+    }
+}
