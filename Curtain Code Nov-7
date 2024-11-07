@@ -1,0 +1,21 @@
+public class CurtainCalculator {
+
+    public static int findTotalCurtains(int n, int[] clothLengths) {
+        int totalCurtains = 0;
+        
+        for (int length : clothLengths) {
+           
+            totalCurtains += length / 12;
+        }
+        
+        return totalCurtains;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        int[] clothLengths = {3, 42, 60, 6, 14};
+
+        int result = findTotalCurtains(n, clothLengths);
+        System.out.println("Total curtains: " + result);
+    }
+}
